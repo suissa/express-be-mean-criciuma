@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  ul
+  for beer in beers
+    li 
+      | #{beer.name} - R$#{beer.price}
