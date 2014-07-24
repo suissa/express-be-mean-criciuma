@@ -32,6 +32,11 @@ module.exports = {
         beer: data
       });
     })
+  },
+  renderCreate: function(req, res){
+    res.render('beers/create', { 
+      title: 'Cadastro de cerveja'
+    });
   }
 };
 
