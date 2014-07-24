@@ -48,7 +48,19 @@ module.exports = {
         title: 'Consulta de cerveja', 
         beer: data
       });
-    })
+    });
+  },
+  renderRemove: function(req, res){
+    var query = {_id: req.params.id};
+    Beer.findOne(query, function(err, data){
+      if(err){
+        res.render('error', { error: err});
+      }
+      res.render('beers/remove', { 
+        title: 'Remoção de cerveja', 
+        beer: data
+      });
+    });
   }
 };
 

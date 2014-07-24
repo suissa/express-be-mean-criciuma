@@ -18,4 +18,8 @@ router.get('/:id/edit', function(req, res) {
   _beer.renderEdit(req, res);
 });
 
+router.get('/:id/remove', function(req, res) {
+  _beer.renderRemove(req, res);
+});
+
 module.exports = router;

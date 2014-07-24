@@ -4,32 +4,24 @@ block content
   h1 Adega Be MEAN
   p= msg
 
-  form(action='/api/beers/#{data._id}?_method=DELETE',
+  form(action='/api/beers/#{beer._id}?_method=DELETE',
       method='POST') 
-    .form-group
-      label Name: 
-      input.form-control(value='#{data.name}'
-                          name='name')
-
-    .form-group
-      label Category: 
-      input.form-control(value='#{data.category}'
-                          name='category')
-
-    .form-group
-      label Price: R$
-      input.form-control(value='#{data.price}'
-                          name='price')
-
-    .form-group
-      label Alcohol: 
-      input.form-control(value='#{data.alcohol}'
-                          name='alcohol')
-
-    .form-group
-      label Description: 
-      input.form-control(value='#{data.description}'
-                          name='description') 
+    p 
+      span Name: 
+      span #{beer.name}
+      br
+      span Category: 
+      span #{beer.category}
+      br
+      span Price: R$
+      span #{beer.price}
+      br
+      span Alcohol: 
+      span #{beer.alcohol}
+      br
+      span Description: 
+      span #{beer.description}
+      br
     .form-group
       input.btn.btn-lg(type='submit', value='Remover')
     //- input(type='hidden', 
