@@ -8,3 +8,7 @@ block content
   for beer in beers
     li 
       a(href='/beers/#{beer._id}') #{beer.name} - R$#{beer.price}
+      | - 
+      a(href='/beers/#{beer._id}/edit') Alterar
+      | - 
+      a(href='/beers/#{beer._id}/remove') Remover
