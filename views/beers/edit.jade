@@ -4,31 +4,31 @@ block content
   h1 Adega Be MEAN
   p= msg
 
-  form(action='/api/beers/#{data._id}?_method=PUT',
+  form(action='/api/beers/#{beer._id}?_method=PUT',
       method='POST') 
     .form-group
       label Name: 
-      input.form-control(value='#{data.name}'
+      input.form-control(value='#{beer.name}'
                           name='name')
 
     .form-group
       label Category: 
-      input.form-control(value='#{data.category}'
+      input.form-control(value='#{beer.category}'
                           name='category')
 
     .form-group
       label Price: R$
-      input.form-control(value='#{data.price}'
+      input.form-control(value='#{beer.price}'
                           name='price')
 
     .form-group
       label Alcohol: 
-      input.form-control(value='#{data.alcohol}'
+      input.form-control(value='#{beer.alcohol}'
                           name='alcohol')
 
     .form-group
       label Description: 
-      input.form-control(value='#{data.description}'
+      input.form-control(value='#{beer.description}'
                           name='description') 
     .form-group
       input.btn.btn-lg(type='submit', value='Salvar')

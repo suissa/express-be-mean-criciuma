@@ -37,6 +37,18 @@ module.exports = {
     res.render('beers/create', { 
       title: 'Cadastro de cerveja'
     });
+  },
+  renderEdit: function(req, res){
+    var query = {_id: req.params.id};
+    Beer.findOne(query, function(err, data){
+      if(err){
+        res.render('error', { error: err});
+      }
+      res.render('beers/edit', { 
+        title: 'Consulta de cerveja', 
+        beer: data
+      });
+    })
   }
 };
 

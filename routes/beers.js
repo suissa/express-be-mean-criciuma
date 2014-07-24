@@ -14,4 +14,8 @@ router.get('/:id', function(req, res) {
   _beer.renderBeer(req, res);
 });
 
+router.get('/:id/edit', function(req, res) {
+  _beer.renderEdit(req, res);
+});
+
 module.exports = router;
