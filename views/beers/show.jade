@@ -5,23 +5,23 @@ block content
 
   p 
     span Name: 
-    span #{data.name}
+    span #{beer.name}
     br
     span Category: 
-    span #{data.category}
+    span #{beer.category}
     br
     span Price: R$
-    span #{data.price}
+    span #{beer.price}
     br
     span Alcohol: 
-    span #{data.alcohol}
+    span #{beer.alcohol}
     br
     span Description: 
-    span #{data.description}
+    span #{beer.description}
     br
-    a(href='/beers/#{data._id}/edit') Editar
+    a(href='/beers/#{beer._id}/edit') Editar
     br
-    a(href='/beers/#{data._id}/remove') Remover
+    a(href='/beers/#{beer._id}/remove') Remover
 
 
 
