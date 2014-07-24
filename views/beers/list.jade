@@ -7,4 +7,4 @@ block content
   ul
   for beer in beers
     li 
-      | #{beer.name} - R$#{beer.price}
+      a(href='/beers/#{beer._id}') #{beer.name} - R$#{beer.price}

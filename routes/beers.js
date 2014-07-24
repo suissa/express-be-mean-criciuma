@@ -6,4 +6,8 @@ router.get('/', function(req, res) {
   _beer.renderList(req, res);
 });
 
+router.get('/:id', function(req, res) {
+  _beer.renderBeer(req, res);
+});
+
 module.exports = router;
